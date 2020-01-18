@@ -1,0 +1,13 @@
+* cpp-template
+This is a basic template for my C++ projects.
+
+** Building 
+#+begin_src bash
+git clone https://github.com/OrdoFlammae/cpp-template.git
+cd cpp-template
+mkdir build
+cd build
+cmake ..
+make
+./cpp-template
+#+end_src

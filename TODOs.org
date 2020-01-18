@@ -1,2 +1,5 @@
 * TODO Decide whether to compile C or Lua.
 Lua is simpler to implement, and might be easier to write. C is more standard, however.
+
+* TODO Add a testing framework
+Probably [[https://www.boost.org/doc/libs/release/libs/test/][Boost.Test]]

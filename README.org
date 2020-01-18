@@ -1,5 +1,5 @@
 * mar-compiler
-This program compiles C (maybe Lua?) code into assembly that can be uploaded to a [[much-assembly-required.com][Much Assembly Required]] robot.
+This program compiles C (maybe Lua?) code into assembly that can be uploaded to a [[http://much-assembly-required.com][Much Assembly Required]] robot.
 
 ** Building 
 #+begin_src bash

@@ -1,0 +1,2 @@
+* TODO Decide whether to compile C or Lua.
+Lua is simpler to implement, and might be easier to write. C is more standard, however.

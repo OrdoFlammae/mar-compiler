@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.10.2)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS 1)
 
-project(cpp-template)
+project(mar-compiler)
 
 add_executable(${PROJECT_NAME}
   src/main.cpp)

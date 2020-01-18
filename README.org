@@ -1,13 +1,13 @@
-* cpp-template
-This is a basic template for my C++ projects.
+* mar-compiler
+This program compiles C (maybe Lua?) code into assembly that can be uploaded to a [[much-assembly-required.com][Much Assembly Required]] robot.
 
 ** Building 
 #+begin_src bash
-git clone https://github.com/OrdoFlammae/cpp-template.git
-cd cpp-template
+git clone https://github.com/OrdoFlammae/mar-compiler.git
+cd mar-compiler
 mkdir build
 cd build
 cmake ..
 make
-./cpp-template
+./mar-compiler
 #+end_src

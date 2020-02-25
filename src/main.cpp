@@ -2,6 +2,7 @@
 #include <fstream>
 
 #include <tclap/CmdLine.h>
+#include <config.h>
 
 int main(int argc, char **argv) {
   std::ifstream inputFile;
@@ -9,7 +10,7 @@ int main(int argc, char **argv) {
 
   // Parse arguments
   try {
-    TCLAP::CmdLine cmd("Command description message", ' ', "0.1"); // TODO: pipe the version from CMake.
+    TCLAP::CmdLine cmd("Command description message", ' ', PROJECT_VERSION);
     TCLAP::ValueArg<std::string> outputFileName("o", "", "File to output", false, "out.asm", "filename", cmd);
     TCLAP::UnlabeledValueArg<std::string> inputFileName("inFile", "File to compile", true, "", "filename", cmd);
 

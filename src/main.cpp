@@ -4,20 +4,32 @@
 #include <tclap/CmdLine.h>
 
 int main(int argc, char **argv) {
+  std::ifstream inputFile;
   std::ofstream outputFile;
 
   // Parse arguments
   try {
     TCLAP::CmdLine cmd("Command description message", ' ', "0.1"); // TODO: pipe the version from CMake.
     TCLAP::ValueArg<std::string> outputFileName("o", "", "File to output", false, "out.asm", "filename", cmd);
+    TCLAP::UnlabeledValueArg<std::string> inputFileName("inFile", "File to compile", true, "", "filename", cmd);
 
     cmd.parse(argc, argv);
+
+    std::string inputFileStr = inputFileName.getValue();
+    inputFile.open(inputFileStr);
+
+    if (!inputFile.is_open()) {
+      std::cerr << "Unable to open file " << inputFileStr << std::endl;
+
+      return 2;
+    }
 
     std::string outputFileStr = outputFileName.getValue();
     outputFile.open(outputFileStr);
 
     if (!outputFile.is_open()) {
       std::cerr << "Unable to open file " << outputFileStr << std::endl;
+      inputFile.close();
 
       return 2;
     }
@@ -30,6 +42,7 @@ int main(int argc, char **argv) {
   std::cout << "Hello World!" << std::endl;
   outputFile << "This is a test output." << std::endl;
 
+  inputFile.close();
   outputFile.close();
 
   return 0;
